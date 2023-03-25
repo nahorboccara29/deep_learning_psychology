@@ -1,7 +1,7 @@
 class LibraryItem:
     """A class representing a library item"""
 
-    def __init__(self, title, author, publication_year, item_id):
+    def __init__(self, title: str, author: str, publication_year: int, item_id: int):
         """Initialize the library item"""
         self.title = title
         self.author = author

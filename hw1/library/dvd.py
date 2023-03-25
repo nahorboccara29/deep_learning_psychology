@@ -1,9 +1,10 @@
 from .library_item import LibraryItem
 
+
 class DVD(LibraryItem):
     """A subclass of LibraryItem that represents the DVD"""
 
-    def __init__(self, title, author, publication_year, item_id, director, length, rating):
+    def __init__(self, title: str, author: str, publication_year: int, item_id: int, director: str, length: int, rating: float):
         """Initialize the DVD"""
         super().__init__(title, author, publication_year, item_id)
         self.director = director
