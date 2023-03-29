@@ -4,7 +4,7 @@ from .library_item import LibraryItem
 from .library_user import LibraryUser
 
 
-class LibraryUser:
+class Library:
     """A class representing a library user"""
 
     def __init__(self, items: List[LibraryItem] = None, users: List[LibraryUser] = None):

@@ -12,4 +12,4 @@ class Book(LibraryItem):
 
     def __repr__(self):
         """Return a string representation of the book"""
-        return f'Book(title={self.title}, author={self.author}, publication_year={self.publisher_year}, item_id={self.item_id}, publisher={self.publisher}, number_of_pages={self.number_of_pages})'
+        return f'Book(title={self.title}, author={self.author}, publication_year={self.publication_year}, item_id={self.item_id}, publisher={self.publisher}, number_of_pages={self.number_of_pages})'

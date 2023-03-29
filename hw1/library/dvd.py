@@ -13,4 +13,4 @@ class DVD(LibraryItem):
 
     def __repr__(self):
         """Return a string representation of the DVD"""
-        return f'DVD(title={self.title}, author={self.author}, publication_year={self.publisher_year}, item_id={self.item_id}, director={self.director}, length={self.length}, rating={self.rating})'
+        return f'DVD(title={self.title}, author={self.author}, publication_year={self.publication_year}, item_id={self.item_id}, director={self.director}, length={self.length}, rating={self.rating})'
