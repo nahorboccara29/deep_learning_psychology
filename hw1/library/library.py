@@ -40,7 +40,7 @@ class Library:
     def return_item(self, user_id: int, item_id: int):
         """Return an item from a user and add it to the library items"""
         user = self._get_user(user_id)
-        item = self._get_item(item_id)
+        item = user._get_item(item_id)
         user.return_item(item_id)
         self.add_item(item)
 
@@ -63,9 +63,27 @@ class Library:
         return f'LibraryUser(items={self.items}, users={self.users})'
 
     def get_items_report(self):
-        print("Items currently in Library:")
-        print('\n\n'.join([str(item) for item in self.items]))
+        print("Items currently in Library:\n------------")
+        for i, item in enumerate(self.items):
+            print(f'{i + 1}. {item}')
+        print('------------')
 
     def get_users_report(self):
-        print("Users currently in Library:")
-        print('\n\n'.join([str(user) for user in self.users]))
+        print("Users currently in Library:\n------------")
+        for i, user in enumerate(self.users):
+            print(f'{i + 1}. {user}')
+        print('------------')
+
+    def get_item_by_name(self, title: str) -> LibraryItem:
+        """Get an item from the library items by its name"""
+        for item in self.items:
+            if title == item.title:
+                return item
+        raise ValueError("Item not found")
+    
+    def get_user_by_name(self, name: str) -> LibraryItem:
+        """Get a user from the library users by their name"""
+        for user in self.users:
+            if name == user.name:
+                return user
+        raise ValueError("User not found")
